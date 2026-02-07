@@ -203,10 +203,16 @@ function App() {
                     <MapPin size={20} />
                     <h4 className="text-base font-semibold uppercase tracking-wider">Locations</h4>
                   </div>
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-4 leading-relaxed mt-2" style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
                     {activeChapter?.locations.length > 0 ? (
                       activeChapter.locations.map((loc, idx) => (
-                        <span key={idx} className="bg-[#242424] text-sm px-3.5 py-1.5 rounded-lg text-gray-300 border border-[#333]">{loc}</span>
+                        <span
+                          key={idx}
+                          className="bg-[#242424] text-sm px-4 py-2 rounded-lg text-gray-200 border border-[#444] whitespace-nowrap shadow-sm"
+                          style={{ display: 'inline-block', marginRight: '0.5rem', marginBottom: '0.5rem', padding: '0.5rem 1rem', backgroundColor: '#242424', border: '1px solid #444', borderRadius: '0.5rem' }}
+                        >
+                          {loc}
+                        </span>
                       ))
                     ) : (
                       <span className="text-gray-600 italic text-sm">No locations listed</span>
@@ -219,10 +225,16 @@ function App() {
                     <Users size={20} />
                     <h4 className="text-base font-semibold uppercase tracking-wider">Characters</h4>
                   </div>
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-4 leading-relaxed mt-2" style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
                     {activeChapter?.characters.length > 0 ? (
                       activeChapter.characters.map((char, idx) => (
-                        <span key={idx} className="bg-[#242424] text-sm px-3.5 py-1.5 rounded-lg text-gray-300 border border-[#333]">{char}</span>
+                        <span
+                          key={idx}
+                          className="bg-[#242424] text-sm px-4 py-2 rounded-lg text-gray-200 border border-[#444] whitespace-nowrap shadow-sm"
+                          style={{ display: 'inline-block', marginRight: '0.5rem', marginBottom: '0.5rem', padding: '0.5rem 1rem', backgroundColor: '#242424', border: '1px solid #444', borderRadius: '0.5rem' }}
+                        >
+                          {char}
+                        </span>
                       ))
                     ) : (
                       <span className="text-gray-600 italic text-sm">No characters listed</span>
